@@ -9,11 +9,11 @@ any file renaming and then executes rsync to handle transfering the remaining fi
 To use this container, you run the container with a `/source` and a `/target` directory 
 mounted.  The container will then sync the directories.
 
-This example can be found in the `test.sh` file in this project.
+This example can be found in the `example.sh` file in this project.
 
 ```bash
 docker run \
-  --mount type=bind,source="$(pwd)"/test/source,target=/source\
-  --mount type=bind,source="$(pwd)"/test/target,target=/target\
+  --mount type=bind,source="$(pwd)"/example/source,target=/source,readonly\
+  --mount type=bind,source="$(pwd)"/example/target,target=/target\
   -it media-rsync
 ```
