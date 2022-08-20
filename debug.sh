@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -it --entrypoint /bin/sh media-rsync
+docker run -it --entrypoint /bin/sh media-sync
